@@ -10,21 +10,40 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var presenter: LoginPresenterContract?
+    
+    @IBOutlet weak var searchBar: UITextField!
+    
+    // MARK: - Inherit
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Login Screen";
+        self.presenter = LoginPresenter(delegate: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Action
+    
+    @IBAction func didFindUser() {
+        log.verbose()
+        presenter?.login(searchBar.text!)
     }
-    */
+    
+    private func userFound() {
+        log.verbose()
+        UserDefaults.standard.set(true, forKey: "LOGGED_IN")
+        AppDelegate.shared.rootViewController.switchToMainScreen()
+    }
+}
 
+extension LoginViewController: LoginViewContract {
+    func displayError(_ error: String) {
+//        self.displayLoader(false)
+        print(error)
+    }
+    
+    func resultLogin() {
+        log.verbose()
+        userFound()
+    }
 }

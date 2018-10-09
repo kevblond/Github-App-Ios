@@ -8,83 +8,84 @@
 
 import UIKit
 
-class MainViewController: UITableViewController {
-
+class MainViewController: UIViewController {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    var presenter : MainPresenterContract?
+    
+    var repositories = ["Cell1","Cell2","Cell3","Cell4","Cell5"]
+    var user = String()
+    var cellSelected = String()
+    
+    // MARK: - Inherit
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.title = user;
+        let logoutButton = UIBarButtonItem(image: UIImage(named: "baseline_power_settings_new_black_18dp"), style: .plain, target: self, action: #selector(didLogout))
+        navigationItem.setRightBarButton(logoutButton, animated: true)
+        self.presenter = MainPresenter(delegate: self)
+        presenter?.getRepositories()
+        initTableView()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        log.verbose()
+        if(segue.identifier == "cellSelected") {
+            let detailViewController = segue.destination as! DetailViewController;
+            detailViewController.descriptionRep = cellSelected;
+            detailViewController.nameRepositorie = cellSelected;
+        }
     }
-    */
+    
+    // MARK: - Action
+    
+    @objc
+    private func didLogout() {
+        log.verbose()
+        UserDefaults.standard.set(false, forKey: "LOGGED_IN")
+        AppDelegate.shared.rootViewController.switchToLogout()
+    }
+    
+    // MARK: - Initialization
+    
+    private func initTableView () {
+        self.tableView.register(RepositorieCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "RepositorieCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.tableView.estimatedRowHeight = 20
+        self.tableView.rowHeight = 100
+    }
+}
 
+extension MainViewController: MainViewContract {
+    func displayError(_ error: String) {
+        //        self.displayLoader(false)
+        print(error)
+    }
+    
+    func restituteRepositories(user: String, repositories: [String]) {
+        log.verbose(repositories)
+        self.repositories = repositories
+    }
+}
+
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repositories.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: RepositorieCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RepositorieCell
+        
+        let cellule = repositories[indexPath.row];
+        cell.setCell(name: cellule, path: cellule, numberView: cellule, language: cellule)
+        return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.cellSelected = repositories[indexPath.row]
+        self.performSegue(withIdentifier: "cellSelected", sender: self)
+    }
 }

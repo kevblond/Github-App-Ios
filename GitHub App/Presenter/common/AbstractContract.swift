@@ -6,4 +6,16 @@
 //  Copyright © 2018 KBL. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol AbstractPresenterContract: class {
+    
+}
+
+protocol AbstractViewContract: class {
+    func displayError(_ error: String)
+}
+
+protocol AbstractTableViewContract: class {
+    func displayError(_ error: String)
+}

@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class CellRepositorie: AbstractEntity {
+    var name: String? = nil
+    var path: String? = nil
+    var numberView: Int? = nil
+    var language: String? = nil
+    
+    init(name: String, path: String, numberView: Int, language: String) {
+        self.name = name
+        self.path = path
+        self.numberView = numberView
+        self.language = language
+    }
+}

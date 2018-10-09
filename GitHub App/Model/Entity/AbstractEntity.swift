@@ -1,9 +1,13 @@
 //
 //  AbstractEntity.swift
-//  GitHub App
+//  LesInfosSNCF
 //
-//  Created by KBL on 09/10/2018.
-//  Copyright © 2018 KBL. All rights reserved.
+//  Created by Benjamin on 24/06/2016.
+//  Copyright © 2016 Qualia. All rights reserved.
 //
 
 import Foundation
+
+class AbstractEntity: NSObject {
+    
+}

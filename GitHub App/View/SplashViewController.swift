@@ -10,21 +10,26 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    private let activityIndic = UIActivityIndicatorView(style: .whiteLarge);
+    
+    // MARK: - Inherit
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        makeServiceCall()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private
+    
+    private func makeServiceCall() {
+        activityIndic.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
+            self.activityIndic.stopAnimating();
+            if UserDefaults.standard.bool(forKey: "LOGGED_IN") {
+                AppDelegate.shared.rootViewController.switchToMainScreen()
+            } else {
+                AppDelegate.shared.rootViewController.switchToLogout()
+            }
+        }
     }
-    */
-
 }

@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct NotificationName {
+    
+    struct User {
+        static let connectResult: String = "ConnectResult"
+        static let connectError: String = "ConnectError"
+    }
+    
+    struct Repositorie {
+        static let loadResult: String = "LoadResult"
+    }
+}

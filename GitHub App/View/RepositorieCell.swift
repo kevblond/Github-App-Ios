@@ -13,7 +13,6 @@ class RepositorieCell: UITableViewCell {
     @IBOutlet weak var nameRepositorie: UILabel!
     @IBOutlet weak var pathRepositorie: UILabel!
     @IBOutlet weak var numberViewerRepositorie: UILabel!
-    @IBOutlet weak var imageViewRepositorie: UIImageView!
     @IBOutlet weak var languageRepositorie: UILabel!
     
     // MARK: - Inherit

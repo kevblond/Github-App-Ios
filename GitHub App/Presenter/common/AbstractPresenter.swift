@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+class AbstractPresenter<T>: NSObject {
+    private weak var _delegate: AnyObject?
+    
+    var delegate: T? {
+        get {
+            return _delegate as? T
+        }
+        set {
+            _delegate = newValue as AnyObject?
+        }
+    }
+    
+    init(delegate: T) {
+        super.init()
+        self.delegate = delegate
+        self.registerNotification()
+    }
+    
+    func registerNotification() {}
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}

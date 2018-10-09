@@ -13,11 +13,12 @@ class UserController: AbstractController {
     
     static let shared = UserController()
     
-    private override init() {}
+    // MARK: - Login
     
     func login() {
         log.verbose()
         NotificationCenter.default.post(name: NotificationName.User.connectResult, data: nil)
+//        NotificationCenter.default.post(name: NotificationName.User.connectError, data: nil)
     }
     
 }

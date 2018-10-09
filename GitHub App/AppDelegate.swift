@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XCGLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds);
+        window?.rootViewController = RootViewController();
+        window?.makeKeyAndVisible();
         return true
     }
 
@@ -41,6 +45,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
 
+extension AppDelegate {
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    var rootViewController: RootViewController {
+        return window!.rootViewController as! RootViewController
+    }
+}
+
+/// logger
+let log: XCGLogger = {
+    let log = XCGLogger.default
+    #if DEBUG
+    let level: XCGLogger.Level = .verbose
+    #else
+    let level: XCGLogger.Level = .none
+    #endif
+    
+    log.setup(level: level,
+              showThreadName: true,
+              showLevel: true,
+              showFileNames: true,
+              showLineNumbers: true,
+              writeToFile: nil,
+              fileLevel: .debug)
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "[HH:mm:ss]"
+    dateFormatter.locale = NSLocale.current
+    log.dateFormatter = dateFormatter
+    
+    return log
+}()

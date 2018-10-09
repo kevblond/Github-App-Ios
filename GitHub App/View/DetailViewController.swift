@@ -9,22 +9,18 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var descriptionRepositorie: UILabel!
+    @IBOutlet weak var avatarUser: UIImageView!
+    
+    var descriptionRep = String();
+    var nameRepositorie = String();
+    
+    // MARK: - Inherit
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        descriptionRepositorie.text = descriptionRep;
+        self.navigationItem.title = nameRepositorie;
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
