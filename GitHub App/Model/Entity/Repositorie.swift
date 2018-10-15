@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CellRepositorie: AbstractEntity {
+class Repositorie: AbstractEntity {
     var name: String? = nil
     var path: String? = nil
     var numberView: Int? = nil
