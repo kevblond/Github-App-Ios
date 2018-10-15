@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 
 class UserController: AbstractController {
@@ -15,10 +16,29 @@ class UserController: AbstractController {
     
     // MARK: - Login
     
-    func login() {
+    func login(user: String) {
         log.verbose()
-        NotificationCenter.default.post(name: NotificationName.User.connectResult, data: nil)
-//        NotificationCenter.default.post(name: NotificationName.User.connectError, data: nil)
+        UserService.searchUser ( user, completionHandler: {
+            (res :Result<User>) in
+            if(res.value?.login != nil) {
+                UserDefaultUtils.setUser(toLog: true, name: (res.value?.login)!, avatarUrl: (res.value?.avatar_url)!)
+                NotificationCenter.default.post(name: NotificationName.User.connectResult, data: nil)
+                
+            }
+        })
     }
     
+    func getUser() -> User {
+//todo        userDAO.getUser
+        let user = UserDefaultUtils.getUser()
+//        let userMock = User(login:"kevblond", avatar_url:"https://avatars1.githubusercontent.com/u/15784992?v=4")
+        return user
+    }
+    
+    func loadImage(url: String) {
+        UserService.loadImage(url, completionHandler: {
+            (res :Result<UIImage>) in
+            NotificationCenter.default.post(name: NotificationName.User.loadImage, data: res.value)
+        })
+    }
 }

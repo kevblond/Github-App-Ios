@@ -10,7 +10,7 @@ import UIKit
 
 class LoginPresenter: AbstractPresenter<LoginViewContract> {
     
-    var currentUser = String()
+    var currentUser = UserVO()
     
     // MARK: - Inherit
     
@@ -36,7 +36,6 @@ extension LoginPresenter: LoginPresenterContract {
     
     func login(_ user: String) {
         log.verbose()
-        self.currentUser = user
-        UserController.shared.login()
+        UserController.shared.login(user: user)
     }
 }

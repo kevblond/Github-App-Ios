@@ -23,7 +23,7 @@ class SplashViewController: UIViewController {
     
     private func makeServiceCall() {
         activityIndic.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             self.activityIndic.stopAnimating();
             if UserDefaults.standard.bool(forKey: "LOGGED_IN") {
                 AppDelegate.shared.rootViewController.switchToMainScreen()

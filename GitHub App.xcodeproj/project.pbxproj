@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062A0349216F97F100EC52E9 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062A0348216F97F100EC52E9 /* UserService.swift */; };
+		062A034B216F981A00EC52E9 /* RepositorieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062A034A216F981A00EC52E9 /* RepositorieService.swift */; };
 		06369CE22164FFB000B92BEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06369CE12164FFB000B92BEA /* RootViewController.swift */; };
 		06369CE42165012700B92BEA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06369CE32165012700B92BEA /* SplashViewController.swift */; };
 		06369D0E2166182800B92BEA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06369D0D2166182800B92BEA /* NavigationViewController.swift */; };
@@ -14,17 +16,21 @@
 		0677D28E216B8DEB00E844EA /* AbstractPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D28D216B8DEB00E844EA /* AbstractPresenter.swift */; };
 		0677D290216B8E3700E844EA /* AbstractContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D28F216B8E3700E844EA /* AbstractContract.swift */; };
 		0677D292216B8F1200E844EA /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D291216B8F1200E844EA /* LoginContract.swift */; };
-		0677D298216B97A400E844EA /* UserVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D297216B97A400E844EA /* UserVo.swift */; };
+		0677D298216B97A400E844EA /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D297216B97A400E844EA /* UserVO.swift */; };
 		0677D29A216BABA400E844EA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D299216BABA400E844EA /* UserController.swift */; };
 		0677D29C216BABCB00E844EA /* AbstractController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D29B216BABCB00E844EA /* AbstractController.swift */; };
 		0677D29E216BAE4500E844EA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D29D216BAE4500E844EA /* Constant.swift */; };
 		0677D2A0216BB5A300E844EA /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D29F216BB5A300E844EA /* NotificationCenter.swift */; };
-		0677D2A6216CA3C600E844EA /* CellRepositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2A5216CA3C600E844EA /* CellRepositorie.swift */; };
+		0677D2A6216CA3C600E844EA /* Repositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2A5216CA3C600E844EA /* Repositorie.swift */; };
 		0677D2A9216CA3E700E844EA /* AbstractEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2A8216CA3E700E844EA /* AbstractEntity.swift */; };
 		0677D2AB216CA60400E844EA /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2AA216CA60400E844EA /* MainContract.swift */; };
 		0677D2AD216CA61200E844EA /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2AC216CA61200E844EA /* MainPresenter.swift */; };
 		0677D2AF216CABAE00E844EA /* RepositorieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2AE216CABAE00E844EA /* RepositorieController.swift */; };
 		0677D2B1216CDFD500E844EA /* RepositorieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0677D2B0216CDFD500E844EA /* RepositorieCell.xib */; };
+		0677D2B5216E36C100E844EA /* RepositorieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2B4216E36C100E844EA /* RepositorieVO.swift */; };
+		0677D2B8216E572500E844EA /* RepositorieConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2B7216E572500E844EA /* RepositorieConverter.swift */; };
+		0677D2BA216E573800E844EA /* UserConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2B9216E573800E844EA /* UserConverter.swift */; };
+		0677D2BC216E588100E844EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2BB216E588100E844EA /* User.swift */; };
 		06CBDD04215937360079535D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CBDD03215937360079535D /* AppDelegate.swift */; };
 		06CBDD09215937360079535D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CBDD07215937360079535D /* Main.storyboard */; };
 		06CBDD0B215937380079535D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CBDD0A215937380079535D /* Assets.xcassets */; };
@@ -33,10 +39,15 @@
 		06CBDD3921621E7B0079535D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CBDD3821621E7B0079535D /* DetailViewController.swift */; };
 		06CBDD3B21621EE10079535D /* RepositorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CBDD3A21621EE10079535D /* RepositorieCell.swift */; };
 		06CBDD3F2162779A0079535D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CBDD3E2162779A0079535D /* MainViewController.swift */; };
+		06F47D332174C7B1009EB553 /* DetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F47D322174C7B1009EB553 /* DetailContract.swift */; };
+		06F47D352174C81B009EB553 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F47D342174C81B009EB553 /* DetailPresenter.swift */; };
+		06F47D3A2174D49D009EB553 /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F47D392174D49D009EB553 /* UserDefaultUtils.swift */; };
 		C86DDE4B328107A272503E10 /* Pods_GitHub_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7894B46A78AB8C20C42BE9F /* Pods_GitHub_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062A0348216F97F100EC52E9 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		062A034A216F981A00EC52E9 /* RepositorieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieService.swift; sourceTree = "<group>"; };
 		06369CE12164FFB000B92BEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Storyboard/RootViewController.swift; sourceTree = "<group>"; };
 		06369CE32165012700B92BEA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		06369D0D2166182800B92BEA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -44,17 +55,21 @@
 		0677D28D216B8DEB00E844EA /* AbstractPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractPresenter.swift; sourceTree = "<group>"; };
 		0677D28F216B8E3700E844EA /* AbstractContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractContract.swift; sourceTree = "<group>"; };
 		0677D291216B8F1200E844EA /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
-		0677D297216B97A400E844EA /* UserVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVo.swift; sourceTree = "<group>"; };
+		0677D297216B97A400E844EA /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		0677D299216BABA400E844EA /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		0677D29B216BABCB00E844EA /* AbstractController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractController.swift; sourceTree = "<group>"; };
 		0677D29D216BAE4500E844EA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0677D29F216BB5A300E844EA /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
-		0677D2A5216CA3C600E844EA /* CellRepositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRepositorie.swift; sourceTree = "<group>"; };
+		0677D2A5216CA3C600E844EA /* Repositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorie.swift; sourceTree = "<group>"; };
 		0677D2A8216CA3E700E844EA /* AbstractEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractEntity.swift; sourceTree = "<group>"; };
 		0677D2AA216CA60400E844EA /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 		0677D2AC216CA61200E844EA /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		0677D2AE216CABAE00E844EA /* RepositorieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieController.swift; sourceTree = "<group>"; };
 		0677D2B0216CDFD500E844EA /* RepositorieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositorieCell.xib; sourceTree = "<group>"; };
+		0677D2B4216E36C100E844EA /* RepositorieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieVO.swift; sourceTree = "<group>"; };
+		0677D2B7216E572500E844EA /* RepositorieConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieConverter.swift; sourceTree = "<group>"; };
+		0677D2B9216E573800E844EA /* UserConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConverter.swift; sourceTree = "<group>"; };
+		0677D2BB216E588100E844EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		06CBDD00215937360079535D /* GitHub App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CBDD03215937360079535D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CBDD08215937360079535D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +80,9 @@
 		06CBDD3821621E7B0079535D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		06CBDD3A21621EE10079535D /* RepositorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieCell.swift; sourceTree = "<group>"; };
 		06CBDD3E2162779A0079535D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		06F47D322174C7B1009EB553 /* DetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContract.swift; sourceTree = "<group>"; };
+		06F47D342174C81B009EB553 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		06F47D392174D49D009EB553 /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		743BCF1CBBBA442F189C5E77 /* Pods-GitHub App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub App/Pods-GitHub App.release.xcconfig"; sourceTree = "<group>"; };
 		782D709AAB15C51DAD2469AE /* Pods-GitHub App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub App/Pods-GitHub App.debug.xcconfig"; sourceTree = "<group>"; };
 		A7894B46A78AB8C20C42BE9F /* Pods_GitHub_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,21 +109,32 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		0677D296216B979800E844EA /* Vo */ = {
+		0677D296216B979800E844EA /* VO */ = {
 			isa = PBXGroup;
 			children = (
-				0677D297216B97A400E844EA /* UserVo.swift */,
+				0677D297216B97A400E844EA /* UserVO.swift */,
+				0677D2B4216E36C100E844EA /* RepositorieVO.swift */,
 			);
-			path = Vo;
+			path = VO;
 			sourceTree = "<group>";
 		};
 		0677D2A7216CA3CC00E844EA /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				0677D2A5216CA3C600E844EA /* CellRepositorie.swift */,
+				0677D2A5216CA3C600E844EA /* Repositorie.swift */,
 				0677D2A8216CA3E700E844EA /* AbstractEntity.swift */,
+				0677D2BB216E588100E844EA /* User.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		0677D2B6216E56EE00E844EA /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				0677D2B7216E572500E844EA /* RepositorieConverter.swift */,
+				0677D2B9216E573800E844EA /* UserConverter.swift */,
+			);
+			path = Converter;
 			sourceTree = "<group>";
 		};
 		06CBDCF7215937360079535D = {
@@ -154,6 +183,7 @@
 		06CBDD16215A7B570079535D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0677D2B6216E56EE00E844EA /* Converter */,
 				0677D299216BABA400E844EA /* UserController.swift */,
 				0677D29B216BABCB00E844EA /* AbstractController.swift */,
 				0677D2AE216CABAE00E844EA /* RepositorieController.swift */,
@@ -172,12 +202,14 @@
 		06CBDD18215A7B690079535D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				0677D296216B979800E844EA /* Vo */,
+				0677D296216B979800E844EA /* VO */,
 				0677D28C216B8DD400E844EA /* common */,
 				0677D28A216B8D9000E844EA /* LoginPresenter.swift */,
 				0677D291216B8F1200E844EA /* LoginContract.swift */,
 				0677D2AC216CA61200E844EA /* MainPresenter.swift */,
 				0677D2AA216CA60400E844EA /* MainContract.swift */,
+				06F47D322174C7B1009EB553 /* DetailContract.swift */,
+				06F47D342174C81B009EB553 /* DetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -193,6 +225,8 @@
 		06CBDD1A215A7B7B0079535D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				062A0348216F97F100EC52E9 /* UserService.swift */,
+				062A034A216F981A00EC52E9 /* RepositorieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -201,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				0677D29F216BB5A300E844EA /* NotificationCenter.swift */,
+				06F47D392174D49D009EB553 /* UserDefaultUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -343,12 +378,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GitHub App/Pods-GitHub App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
@@ -364,19 +403,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0677D2BC216E588100E844EA /* User.swift in Sources */,
 				06369D0E2166182800B92BEA /* NavigationViewController.swift in Sources */,
 				0677D292216B8F1200E844EA /* LoginContract.swift in Sources */,
+				0677D2B8216E572500E844EA /* RepositorieConverter.swift in Sources */,
+				06F47D352174C81B009EB553 /* DetailPresenter.swift in Sources */,
+				062A0349216F97F100EC52E9 /* UserService.swift in Sources */,
 				06CBDD3B21621EE10079535D /* RepositorieCell.swift in Sources */,
 				0677D2A0216BB5A300E844EA /* NotificationCenter.swift in Sources */,
 				0677D2A9216CA3E700E844EA /* AbstractEntity.swift in Sources */,
+				06F47D3A2174D49D009EB553 /* UserDefaultUtils.swift in Sources */,
+				0677D2BA216E573800E844EA /* UserConverter.swift in Sources */,
 				0677D29E216BAE4500E844EA /* Constant.swift in Sources */,
-				0677D298216B97A400E844EA /* UserVo.swift in Sources */,
+				0677D298216B97A400E844EA /* UserVO.swift in Sources */,
 				06CBDD3921621E7B0079535D /* DetailViewController.swift in Sources */,
 				0677D29C216BABCB00E844EA /* AbstractController.swift in Sources */,
 				0677D28B216B8D9000E844EA /* LoginPresenter.swift in Sources */,
 				06369CE22164FFB000B92BEA /* RootViewController.swift in Sources */,
-				0677D2A6216CA3C600E844EA /* CellRepositorie.swift in Sources */,
+				0677D2A6216CA3C600E844EA /* Repositorie.swift in Sources */,
 				0677D2AB216CA60400E844EA /* MainContract.swift in Sources */,
+				062A034B216F981A00EC52E9 /* RepositorieService.swift in Sources */,
 				06CBDD2D216218420079535D /* LoginViewController.swift in Sources */,
 				06CBDD04215937360079535D /* AppDelegate.swift in Sources */,
 				0677D2AF216CABAE00E844EA /* RepositorieController.swift in Sources */,
@@ -384,7 +430,9 @@
 				0677D290216B8E3700E844EA /* AbstractContract.swift in Sources */,
 				0677D28E216B8DEB00E844EA /* AbstractPresenter.swift in Sources */,
 				0677D2AD216CA61200E844EA /* MainPresenter.swift in Sources */,
+				06F47D332174C7B1009EB553 /* DetailContract.swift in Sources */,
 				06CBDD3F2162779A0079535D /* MainViewController.swift in Sources */,
+				0677D2B5216E36C100E844EA /* RepositorieVO.swift in Sources */,
 				0677D29A216BABA400E844EA /* UserController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

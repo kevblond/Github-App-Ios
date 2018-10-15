@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct User: Decodable {
+    
+    let login: String
+    let avatar_url: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case login
+        case avatar_url
+    }
+}

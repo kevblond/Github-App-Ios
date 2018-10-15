@@ -9,5 +9,11 @@
 import Foundation
 
 struct RepositorieVO {
+    let cellIdentifier: String = "UserReuseIdentifier"
+    var name: String!
+    var path: String!
+    var numberView: Int!
+    var langage: String!
+    var description: String!
     
 }

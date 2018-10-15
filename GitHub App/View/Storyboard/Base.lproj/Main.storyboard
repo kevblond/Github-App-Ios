@@ -92,43 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="-45"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="WhX-53-8my">
-            <objects>
-                <viewController id="FKX-YB-gNl" customClass="MainViewController" customModule="GitHub_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mYH-tx-hLX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-gG-sX8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="FKX-YB-gNl" id="FNh-nZ-JeE"/>
-                                    <outlet property="delegate" destination="FKX-YB-gNl" id="Ex5-xw-3jk"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Kc6-CO-vph" firstAttribute="trailing" secondItem="ObX-gG-sX8" secondAttribute="trailing" id="MNs-mk-6jl"/>
-                            <constraint firstItem="ObX-gG-sX8" firstAttribute="leading" secondItem="Kc6-CO-vph" secondAttribute="leading" id="TqK-fH-M4z"/>
-                            <constraint firstItem="ObX-gG-sX8" firstAttribute="top" secondItem="Kc6-CO-vph" secondAttribute="top" id="fpT-IA-fGh"/>
-                            <constraint firstItem="Kc6-CO-vph" firstAttribute="bottom" secondItem="ObX-gG-sX8" secondAttribute="bottom" id="lur-cz-tQ1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Kc6-CO-vph"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="10X-tR-kig"/>
-                    <connections>
-                        <outlet property="tableView" destination="ObX-gG-sX8" id="ubs-yq-DlT"/>
-                        <segue destination="Qgu-iL-bvr" kind="show" identifier="cellSelected" id="VoB-ZU-gV1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nQv-V8-upc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2271.1999999999998" y="-45.073891625615765"/>
+            <point key="canvasLocation" x="-926" y="-45"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="4me-ix-msT">
@@ -169,25 +133,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URT-MS-wdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="-45.073891625615765"/>
+            <point key="canvasLocation" x="2241" y="-45"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="RjV-t6-JvJ">
+            <objects>
+                <viewController id="H2q-FL-21t" customClass="MainViewController" customModule="GitHub_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZM-DM-gfa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xjs-AR-suS">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PCN-M2-28l">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="H2q-FL-21t" id="ckR-c4-lqo"/>
+                                    <outlet property="delegate" destination="H2q-FL-21t" id="WCE-37-zS0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RqX-OY-YtB" firstAttribute="bottom" secondItem="xjs-AR-suS" secondAttribute="bottom" id="CpO-cR-SSr"/>
+                            <constraint firstItem="xjs-AR-suS" firstAttribute="leading" secondItem="RqX-OY-YtB" secondAttribute="leading" id="Pgq-0G-yWw"/>
+                            <constraint firstItem="xjs-AR-suS" firstAttribute="top" secondItem="RqX-OY-YtB" secondAttribute="top" id="R5Y-k1-T9g"/>
+                            <constraint firstItem="RqX-OY-YtB" firstAttribute="trailing" secondItem="xjs-AR-suS" secondAttribute="trailing" id="nU5-qI-leF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RqX-OY-YtB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fQJ-Yu-zhM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xjs-AR-suS" id="L4R-ue-1kn"/>
+                        <segue destination="Qgu-iL-bvr" kind="show" identifier="cellSelected" id="cpq-ud-fls"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmb-AR-OlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="-45"/>
         </scene>
         <!--Navigation View Controller-->
-        <scene sceneID="fPc-cZ-ptw">
+        <scene sceneID="vzd-TI-aI9">
             <objects>
-                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="Oac-d4-fe9" customClass="NavigationViewController" customModule="GitHub_App" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="QbF-wg-IPs" customClass="NavigationViewController" customModule="GitHub_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6JJ-Fo-Ztl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x7P-u3-hGe">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="FKX-YB-gNl" kind="relationship" relationship="rootViewController" id="CWH-Ll-RMH"/>
+                        <segue destination="H2q-FL-21t" kind="relationship" relationship="rootViewController" id="LKh-aX-88W"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RhP-MC-ZYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFC-6f-8rw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328.8" y="-45.073891625615765"/>
+            <point key="canvasLocation" x="209" y="-45"/>
         </scene>
     </scenes>
     <resources>

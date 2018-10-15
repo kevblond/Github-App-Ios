@@ -9,9 +9,9 @@
 import UIKit
 
 protocol MainPresenterContract: AbstractPresenterContract {
-    func getRepositories()
+    func getData()
 }
 
 protocol MainViewContract: AbstractViewContract {
-    func restituteRepositories(user: String, repositories: [String])
+    func restituteRepositories(user: UserVO, repositories: [RepositorieVO])
 }

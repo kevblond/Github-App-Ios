@@ -8,16 +8,19 @@
 
 import Foundation
 
-class Repositorie: AbstractEntity {
-    var name: String? = nil
-    var path: String? = nil
-    var numberView: Int? = nil
-    var language: String? = nil
+struct Repositorie: Decodable {
     
-    init(name: String, path: String, numberView: Int, language: String) {
-        self.name = name
-        self.path = path
-        self.numberView = numberView
-        self.language = language
+    let name: String
+    let full_name: String
+    let watchers_count: Int
+    let language: String?
+    let descriptionRep: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case full_name
+        case watchers_count
+        case language
+        case descriptionRep = "description"
     }
 }

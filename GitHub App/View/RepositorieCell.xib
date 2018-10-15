@@ -65,10 +65,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="languageRepositorie" destination="xDa-EV-RoN" id="KfW-DJ-2yc"/>
-                <outlet property="nameRepositorie" destination="zjO-I2-lz6" id="Chn-Xv-j4y"/>
-                <outlet property="numberViewerRepositorie" destination="nIG-5E-swt" id="JIJ-66-zGC"/>
-                <outlet property="pathRepositorie" destination="RUa-si-haX" id="p64-Ld-Ww5"/>
+                <outlet property="fullName" destination="RUa-si-haX" id="z2H-qM-uYP"/>
+                <outlet property="langage" destination="xDa-EV-RoN" id="Two-lZ-iC1"/>
+                <outlet property="name" destination="zjO-I2-lz6" id="enK-6Z-SWh"/>
+                <outlet property="numberView" destination="nIG-5E-swt" id="qqH-ub-ipT"/>
             </connections>
             <point key="canvasLocation" x="197.59999999999999" y="214.09295352323841"/>
         </tableViewCell>

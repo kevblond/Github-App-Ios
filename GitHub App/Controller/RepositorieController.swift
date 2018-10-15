@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import CodableAlamofire
 
 
 class RepositorieController: AbstractController {
@@ -15,8 +17,11 @@ class RepositorieController: AbstractController {
     
     // MARK: - Repositorie
     
-    func retrieveRepositories() {
+    func retrieveRepositories(user: User) {
         log.verbose()
-        NotificationCenter.default.post(name: NotificationName.Repositorie.loadResult, data: ["CellCont1", "CellCont2", "CellCont3", "CellCont4", "CellCont5"])
+        RepositorieService.getRepositories(user.login, completionHandler: {
+            (res: Result<[Repositorie]>) in
+                NotificationCenter.default.post(name: NotificationName.Repositorie.loadResult, data: res.value)
+        })
     }
 }

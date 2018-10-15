@@ -6,5 +6,7 @@ inhibit_all_warnings!
 target 'GitHub App' do
   pod 'Alamofire', '~> 4.7'
   pod 'XCGLogger', '6.1.0'
+  pod 'CodableAlamofire', '~> 1.1'
+  pod 'AlamofireImage', '~> 3.4'
 end
 

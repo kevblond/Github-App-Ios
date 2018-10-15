@@ -6,4 +6,10 @@
 //  Copyright © 2018 KBL. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct UserVO {
+    let cellIdentifier: String = "UserReuseIdentifier"
+    var avatarName: String!
+    var name: String!
+}

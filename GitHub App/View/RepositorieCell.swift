@@ -8,30 +8,49 @@
 
 import UIKit
 
-class RepositorieCell: UITableViewCell {
+class RepositorieCell: UICollectionViewCell {
 
-    @IBOutlet weak var nameRepositorie: UILabel!
-    @IBOutlet weak var pathRepositorie: UILabel!
-    @IBOutlet weak var numberViewerRepositorie: UILabel!
-    @IBOutlet weak var languageRepositorie: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var langage: UILabel!
+    @IBOutlet weak var numberView: UILabel!
+    
+    private var isLoaded: Bool = false
+
+    var repository: RepositorieVO? {
+        didSet {
+            updateView()
+        }
+    }
     
     // MARK: - Inherit
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        isLoaded = true
+        updateView()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    private func updateView() {
+        if isLoaded {
+            if let repository = repository {
+                self.name.text = repository.name
+                self.fullName.text = repository.path
+                self.numberView.text = String(repository.numberView)
+                self.langage.text = repository.langage
+            } else {
+                self.name.text = nil
+                self.fullName.text = nil
+                self.numberView.text = nil
+                self.langage.text = nil
+            }
+        }
     }
+
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
     
     // MARK: - Initialization
-    
-    func setCell(name: String, path: String, numberView: String, language: String) {
-        self.nameRepositorie.text = name;
-        self.pathRepositorie.text = path;
-        self.numberViewerRepositorie.text = numberView;
-        self.languageRepositorie.text = language;
-    }
-
 }
