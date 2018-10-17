@@ -79,7 +79,7 @@ class MainViewController: UIViewController {
 // MARK: - MainViewContract
 extension MainViewController: MainViewContract {
     func displayError(_ error: String) {
-        //        self.displayLoader(false)
+        self.displayLoader(false)
         print(error)
     }
     

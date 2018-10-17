@@ -35,7 +35,6 @@ extension MainPresenter: MainPresenterContract {
         log.verbose()
         let user = UserController.shared.getUser()
         currentUser = UserConverter.entityToVo(user)
-        log.debug(currentUser)
         RepositorieController.shared.retrieveRepositories(user: user)
     }
 }

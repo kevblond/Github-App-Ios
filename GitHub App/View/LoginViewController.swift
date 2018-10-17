@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     var presenter: LoginPresenterContract?
     
     @IBOutlet weak var searchBar: UITextField!
@@ -26,19 +26,22 @@ class LoginViewController: UIViewController {
     
     @IBAction func didFindUser() {
         log.verbose()
+        self.displayLoader(true)
         presenter?.login(searchBar.text!)
     }
     
     private func userFound() {
         log.verbose()
-        AppDelegate.shared.rootViewController.switchToMainScreen()
+        self.displayLoader(false, completion: ({
+            AppDelegate.shared.rootViewController.switchToMainScreen()
+        }))
     }
 }
 
 extension LoginViewController: LoginViewContract {
     func displayError(_ error: String) {
-//        self.displayLoader(false)
-        print(error)
+        log.verbose()
+        self.displayLoader(false)
     }
     
     func resultLogin() {

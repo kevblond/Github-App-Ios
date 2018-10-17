@@ -16,6 +16,10 @@ struct URLApp {
     }
 }
 
+struct StoryboardName {
+    static let Loading = "Loading"
+}
+
 struct NotificationName {
     
     struct User {

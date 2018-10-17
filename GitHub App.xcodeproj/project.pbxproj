@@ -31,6 +31,9 @@
 		0677D2B8216E572500E844EA /* RepositorieConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2B7216E572500E844EA /* RepositorieConverter.swift */; };
 		0677D2BA216E573800E844EA /* UserConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2B9216E573800E844EA /* UserConverter.swift */; };
 		0677D2BC216E588100E844EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677D2BB216E588100E844EA /* User.swift */; };
+		068CA38B217790C200029D3A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CA38A217790C200029D3A /* UIViewController.swift */; };
+		068CA38D2177920B00029D3A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068CA38C2177920B00029D3A /* Loading.storyboard */; };
+		068CA38F2177921600029D3A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CA38E2177921600029D3A /* LoadingViewController.swift */; };
 		06CBDD04215937360079535D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CBDD03215937360079535D /* AppDelegate.swift */; };
 		06CBDD09215937360079535D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CBDD07215937360079535D /* Main.storyboard */; };
 		06CBDD0B215937380079535D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CBDD0A215937380079535D /* Assets.xcassets */; };
@@ -70,6 +73,9 @@
 		0677D2B7216E572500E844EA /* RepositorieConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieConverter.swift; sourceTree = "<group>"; };
 		0677D2B9216E573800E844EA /* UserConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConverter.swift; sourceTree = "<group>"; };
 		0677D2BB216E588100E844EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		068CA38A217790C200029D3A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		068CA38C2177920B00029D3A /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
+		068CA38E2177921600029D3A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		06CBDD00215937360079535D /* GitHub App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CBDD03215937360079535D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CBDD08215937360079535D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 			children = (
 				0677D29F216BB5A300E844EA /* NotificationCenter.swift */,
 				06F47D392174D49D009EB553 /* UserDefaultUtils.swift */,
+				068CA38A217790C200029D3A /* UIViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 			children = (
 				06369CE12164FFB000B92BEA /* RootViewController.swift */,
 				06369CE32165012700B92BEA /* SplashViewController.swift */,
+				068CA38E2177921600029D3A /* LoadingViewController.swift */,
 				06CBDD2C216218420079535D /* LoginViewController.swift */,
 				06369D0D2166182800B92BEA /* NavigationViewController.swift */,
 				06CBDD3E2162779A0079535D /* MainViewController.swift */,
@@ -259,6 +267,7 @@
 		06CBDD1D215A7C010079535D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				068CA38C2177920B00029D3A /* Loading.storyboard */,
 				06CBDD0C215937380079535D /* LaunchScreen.storyboard */,
 				06CBDD07215937360079535D /* Main.storyboard */,
 			);
@@ -345,6 +354,7 @@
 				06CBDD0E215937380079535D /* LaunchScreen.storyboard in Resources */,
 				0677D2B1216CDFD500E844EA /* RepositorieCell.xib in Resources */,
 				06CBDD0B215937380079535D /* Assets.xcassets in Resources */,
+				068CA38D2177920B00029D3A /* Loading.storyboard in Resources */,
 				06CBDD09215937360079535D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,12 +421,14 @@
 				062A0349216F97F100EC52E9 /* UserService.swift in Sources */,
 				06CBDD3B21621EE10079535D /* RepositorieCell.swift in Sources */,
 				0677D2A0216BB5A300E844EA /* NotificationCenter.swift in Sources */,
+				068CA38F2177921600029D3A /* LoadingViewController.swift in Sources */,
 				0677D2A9216CA3E700E844EA /* AbstractEntity.swift in Sources */,
 				06F47D3A2174D49D009EB553 /* UserDefaultUtils.swift in Sources */,
 				0677D2BA216E573800E844EA /* UserConverter.swift in Sources */,
 				0677D29E216BAE4500E844EA /* Constant.swift in Sources */,
 				0677D298216B97A400E844EA /* UserVO.swift in Sources */,
 				06CBDD3921621E7B0079535D /* DetailViewController.swift in Sources */,
+				068CA38B217790C200029D3A /* UIViewController.swift in Sources */,
 				0677D29C216BABCB00E844EA /* AbstractController.swift in Sources */,
 				0677D28B216B8D9000E844EA /* LoginPresenter.swift in Sources */,
 				06369CE22164FFB000B92BEA /* RootViewController.swift in Sources */,

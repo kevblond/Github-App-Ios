@@ -26,7 +26,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         descriptionRepositorie.text = repositorie.description
         self.navigationItem.title = repositorie.name
-        log.debug(user)
         self.presenter = DetailPresenter(delegate:self)
         presenter?.loadImage(url: user.avatarName)
     }
